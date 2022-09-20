@@ -10,7 +10,7 @@ const Characters = ({ characters }: CharactersProps): JSX.Element => (
   <CharactersStyled>
     <ul className="characters__list">
       {characters.map((character) => (
-        <li className="characters__character">
+        <li className="characters__character" key={character.name}>
           <Character character={character} />
         </li>
       ))}
