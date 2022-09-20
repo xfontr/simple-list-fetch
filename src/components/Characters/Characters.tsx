@@ -8,9 +8,9 @@ type CharactersProps = {
 
 const Characters = ({ characters }: CharactersProps): JSX.Element => (
   <CharactersStyled>
-    <ul>
+    <ul className="characters__list">
       {characters.map((character) => (
-        <li>
+        <li className="characters__character">
           <Character character={character} />
         </li>
       ))}

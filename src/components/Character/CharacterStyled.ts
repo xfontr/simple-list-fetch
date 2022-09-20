@@ -25,7 +25,11 @@ const CharacterStyled = styled.article`
     }
 
     &__data {
-      width: 45%;
+      max-width: 100%;
+
+      @media (min-width: ${({ theme }) => theme.breakpoints.small}) {
+        max-width: 35%;
+      }
 
       & > * {
         display: block;
