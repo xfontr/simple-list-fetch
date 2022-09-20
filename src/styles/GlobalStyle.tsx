@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import mainTheme from "./mainTheme";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -8,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: montserrat, sans-serif;
+    color: ${mainTheme.color.typography};
   }
 
   ul {
