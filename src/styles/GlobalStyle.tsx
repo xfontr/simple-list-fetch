@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+    font-family: montserrat, sans-serif;
   }
 
   ul {
