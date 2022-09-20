@@ -21,11 +21,11 @@ const Character = ({ character }: CharacterProps): JSX.Element => (
         {character.mass}
       </li>
       <li className="character__data">
-        <span className="data__heading">Eye color</span>
+        <span className="data__heading">Eye</span>
         {character.eye_color}
       </li>
       <li className="character__data">
-        <span className="data__heading">Hair color</span>
+        <span className="data__heading">Hair</span>
         {character.hair_color}
       </li>
       <li className="character__data">
@@ -33,7 +33,7 @@ const Character = ({ character }: CharacterProps): JSX.Element => (
         {character.gender}
       </li>
       <li className="character__data">
-        <span className="data__heading">Skin color</span>
+        <span className="data__heading">Skin</span>
         {character.skin_color}
       </li>
     </ul>
