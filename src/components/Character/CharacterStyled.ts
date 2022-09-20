@@ -4,7 +4,8 @@ const CharacterStyled = styled.article`
   padding: ${({ theme }) => theme.spacing.big};
   background-color: ${({ theme }) => theme.color.secondary};
   border-radius: ${({ theme }) => theme.shaping.radiusSmall};
-  max-width: 25rem;
+  max-height: 16rem;
+  overflow: hidden;
 
   .character {
     &__name {
@@ -14,22 +15,18 @@ const CharacterStyled = styled.article`
     }
 
     &__main-data {
-      margin-bottom: ${({ theme }) => theme.spacing.small};
+      margin-bottom: ${({ theme }) => theme.spacing.big};
     }
 
     &__body {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
-      gap: ${({ theme }) => theme.spacing.small};
+      justify-content: space-between;
+      gap: ${({ theme }) => theme.spacing.big};
     }
 
     &__data {
-      max-width: 100%;
-
-      @media (min-width: ${({ theme }) => theme.breakpoints.small}) {
-        max-width: 35%;
-      }
+      max-width: 35%;
 
       & > * {
         display: block;
@@ -39,6 +36,14 @@ const CharacterStyled = styled.article`
 
   .data__heading {
     font-weight: bold;
+  }
+
+  .left-section,
+  .central-section,
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    gap: ${({ theme }) => theme.spacing.big};
   }
 `;
 
