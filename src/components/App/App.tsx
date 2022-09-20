@@ -16,7 +16,11 @@ const App = (): JSX.Element => {
 
   return (
     <div className="app">
-      <Characters characters={characters} />
+      {characters.length ? (
+        <Characters characters={characters} />
+      ) : (
+        <span>It doesn't seem we have found any card, by now</span>
+      )}
     </div>
   );
 };
