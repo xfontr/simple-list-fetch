@@ -5,14 +5,18 @@ import ICharacter from "../types/ICharacter";
 
 const useStarWars = () => {
   const getAllCharacters = useCallback(
-    async (page = 1): Promise<ICharacter[]> => {
-      const {
-        data: { results },
-      }: AxiosResponse = await axios.get(
-        `${environment.apiURL}/people/?page=${page}`
-      );
+    async (page = 1): Promise<ICharacter[] | void> => {
+      try {
+        const {
+          data: { results },
+        }: AxiosResponse = await axios.get(
+          `${environment.apiURL}/people/?page=${page}`
+        );
 
-      return results;
+        return results;
+      } catch (error) {
+        return undefined;
+      }
     },
     []
   );
