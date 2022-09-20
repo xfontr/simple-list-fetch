@@ -4,9 +4,9 @@ import mockCharacter from "../../test-utils/mocks/mockCharacter";
 import { screen } from "@testing-library/react";
 
 describe("Given a Characters component", () => {
-  describe("When instantiated with a list of 5 characters as props", () => {
+  describe("When instantiated with a list of 1 characters as props", () => {
     test("Then it should display said list", () => {
-      const amountOfCharacters = 5;
+      const amountOfCharacters = 1;
 
       render(
         <Characters

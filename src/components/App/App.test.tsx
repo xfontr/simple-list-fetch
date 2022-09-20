@@ -3,7 +3,7 @@ import render from "../../test-utils/customRender/customRender";
 import mockCharacter from "../../test-utils/mocks/mockCharacter";
 import App from "./App";
 
-const mockAmountOfCharacters = 5;
+const mockAmountOfCharacters = 1;
 const mockCharacterList = new Array(mockAmountOfCharacters).fill(mockCharacter);
 
 jest.mock("axios", () => ({

@@ -11,7 +11,7 @@ const App = (): JSX.Element => {
   useEffect(() => {
     (async () => {
       const data = await getAllCharacters();
-      setCharacters(data);
+      setCharacters(data ? data : []);
     })();
   }, [getAllCharacters]);
 
